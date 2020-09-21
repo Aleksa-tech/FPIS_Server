@@ -1,0 +1,48 @@
+﻿@model IEnumerable<FPIS.Entities.Klijent>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="ClientsTable">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Id klijenta
+                </th>
+                <th>
+                    PIB
+                </th>
+                <th>
+                    Adresa i sediste
+                </th>
+                <th>
+                    Ime i prezime klijenta
+                </th>
+                <th>
+                    Broj racuna
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var client in Model)
+            {
+            <tr>
+                <td>@client.Id</td>
+                <td>@client.PIB</td>
+                <td>@client.AdresaISediste</td>
+                <td>@client.ImeIPrezimeKlijenta</td>
+                <td>@client.BrojRacuna</td>
+                <td><a asp-controller="Clients" asp-action="Edit" asp-route-id="@client.Id">Edit</a></td>
+                <td><a asp-controller="Clients" asp-action="Delete" asp-route-id="@client.Id">Delete</a></td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+
+

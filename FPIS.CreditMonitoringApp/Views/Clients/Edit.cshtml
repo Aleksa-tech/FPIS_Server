@@ -1,0 +1,52 @@
+﻿@model FPIS.CreditMonitoringApp.Models.ClientViewModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-4">
+        <form id="editClient" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Client.Id" required />
+
+            <div class="form-group">
+                <label asp-for="Client.ImeIPrezimeKlijenta" class="control-label"></label>
+                <input asp-for="Client.ImeIPrezimeKlijenta" class="form-control" disabled />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Client.AdresaISediste" class="control-label"></label>
+                <input asp-for="Client.AdresaISediste" class="form-control" required />
+                <span asp-validation-for="Client.AdresaISediste" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Client.PIB" class="control-label"></label>
+                <input asp-for="Client.PIB" class="form-control" />
+                <span asp-validation-for="Client.PIB" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Client.BrojRacuna" class="control-label"></label>
+                <input asp-for="Client.BrojRacuna" class="form-control" disabled />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-primary" />
+                <input type="button" value="Cancel" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Clients")'" />
+            </div>
+        </form>
+    </div>
+    <p class="text-danger">
+        @ViewBag.Error
+    </p>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+
+    </script>
+}
+

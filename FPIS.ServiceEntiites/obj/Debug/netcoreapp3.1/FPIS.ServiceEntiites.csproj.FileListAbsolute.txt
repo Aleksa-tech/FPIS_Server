@@ -1,0 +1,11 @@
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.ServiceEntiites\bin\Debug\netcoreapp3.1\FPIS.ServiceEntiites.deps.json
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.ServiceEntiites\bin\Debug\netcoreapp3.1\FPIS.ServiceEntiites.dll
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.ServiceEntiites\bin\Debug\netcoreapp3.1\FPIS.ServiceEntiites.pdb
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.ServiceEntiites\bin\Debug\netcoreapp3.1\FPIS.Entities.dll
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.ServiceEntiites\bin\Debug\netcoreapp3.1\FPIS.Entities.pdb
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.ServiceEntiites\obj\Debug\netcoreapp3.1\FPIS.ServiceEntiites.csprojAssemblyReference.cache
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.ServiceEntiites\obj\Debug\netcoreapp3.1\FPIS.ServiceEntiites.AssemblyInfoInputs.cache
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.ServiceEntiites\obj\Debug\netcoreapp3.1\FPIS.ServiceEntiites.AssemblyInfo.cs
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.ServiceEntiites\obj\Debug\netcoreapp3.1\FPIS.ServiceEntiites.csproj.CopyComplete
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.ServiceEntiites\obj\Debug\netcoreapp3.1\FPIS.ServiceEntiites.dll
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.ServiceEntiites\obj\Debug\netcoreapp3.1\FPIS.ServiceEntiites.pdb

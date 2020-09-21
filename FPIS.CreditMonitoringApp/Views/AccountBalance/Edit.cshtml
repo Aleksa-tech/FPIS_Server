@@ -1,0 +1,115 @@
+﻿@model FPIS.CreditMonitoringApp.Models.AccountBalanceViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Add account balance</h3>
+
+<div class="row">
+    <div class="col-4">
+        <form id="addAccountBalances" method="post" />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="Account.Id" class="control-label">Broj racuna: </label>
+            <input id="AccountId" asp-for="Account.Id" class="form-control" required />
+            <span asp-validation-for="Account.Id" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="AccountType">Tip racuna:</label>
+            <select id="AccountTypes" class="form-control" asp-for="@Model.Account.TipRacuna"
+                    asp-items="@(new SelectList(Model.AccountTypes))">
+                <option value="">Please select one</option>
+            </select>
+            <span asp-validation-for="@Model.Account.TipRacuna" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input id="Pronadji" type="button" value="Pronadji" class="btn btn-primary" />
+        </div>
+
+        <input type="hidden" asp-for="AccountBalance.Id" required />
+        <div class="form-group">
+            <label asp-for="AccountBalance.IznosStanja" class="control-label">Iznos stanja: </label>
+            <input id="NovoStanje" asp-for="AccountBalance.IznosStanja" class="form-control" required />
+            <span asp-validation-for="AccountBalance.IznosStanja" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input id="KreirajStanje" type="button" value="Kreiraj stanje" class="btn btn-primary" />
+        </div>
+
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        RB
+                    </th>
+                    <th>
+                        StanjeID
+                    </th>
+                    <th>
+                        Iznos stanja
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody id="accountBalances">
+            </tbody>
+        </table>
+
+        <div class="form-group">
+            <input type="submit" value="Potvrdi unos" class="btn btn-primary" />
+            <input type="button" value="Cancel" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "AccountBalance")'" />
+        </div>
+
+    </div>
+    <p class="text-danger">
+        @ViewBag.Message
+    </p>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $('#Pronadji').click(function () {
+            var accId = $('#AccountId').val();
+            var accType = $('#AccountTypes').val();
+            var rb = 1;
+        $.ajax({
+            url: '@Url.Action("GetAccountBalances", "AccountBalance")',
+            type: "GET",
+            data: { accId: accId, accType: accType },
+            success: function (result) {
+               var accBalances = $('#accountBalances');
+                accBalances.empty();
+                var s = '';
+                for (var i = 0; i < result.length; i++) {
+                    s = '<tr>';
+                    s += '<td>' + rb++ + '</td>';
+                    s += '<td>' + result[i].id +'</td>';
+                    s += '<td>' + result[i].iznosStanja +'</td>';
+                    s += '</tr';
+                    $("#accountBalances").append(s);
+                }
+            },
+            error: function (response) {
+                alert(response.responseText);
+            }
+        });
+        });
+
+        $('#KreirajStanje').click(function () {
+            var newAccBalance = $('#NovoStanje').val();
+            var s = '';
+            s = '<tr>';
+            s += '<td>' + rb++ + '</td>';
+            s += '<td>' + +'</td>';
+            s += '<td>' + newAccBalance + '</td>';
+            s += '</tr';
+            $("#accountBalances").append(s);
+        });
+    </script>
+}

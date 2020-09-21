@@ -1,0 +1,8 @@
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.Entities\bin\Debug\netcoreapp3.1\FPIS.Entities.deps.json
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.Entities\bin\Debug\netcoreapp3.1\FPIS.Entities.dll
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.Entities\obj\Debug\netcoreapp3.1\FPIS.Entities.AssemblyInfoInputs.cache
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.Entities\obj\Debug\netcoreapp3.1\FPIS.Entities.AssemblyInfo.cs
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.Entities\bin\Debug\netcoreapp3.1\FPIS.Entities.pdb
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.Entities\obj\Debug\netcoreapp3.1\FPIS.Entities.dll
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.Entities\obj\Debug\netcoreapp3.1\FPIS.Entities.pdb
+C:\Users\allj0211\Downloads\Aleksa\FPIS\CreditMonitoringApp\FPIS.Entities\obj\Debug\netcoreapp3.1\FPIS.Entities.csprojAssemblyReference.cache
